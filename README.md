@@ -9,7 +9,7 @@ Bienvenido al repositorio de mi portafolio personal. Aquí comparto los proyecto
 * Siempre buscando aprender nuevas herramientas y mejorar mis habilidades en programación y UI.
 
 ### Tecnologías y Habilidades
-* **Desarrollo Front-end:** HTML5, CSS3, JavaScript, Responsive Design.
+* **Desarrollo Web** HTML5, CSS3, JavaScript, PHP.
 * **CMS y Gestión de Contenido:** Experiencia en administración y estructuración de sitios, incluyendo la creación de manuales de gestión para plataformas como **WordPress**.
 * **Diseño:** UI/UX, creación de wireframes y prototipos interactivos.
 
