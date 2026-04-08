@@ -61,7 +61,7 @@ require __DIR__ . '/../layout/header.php';
                   <i class="bi bi-pencil"></i>
                 </a>
                 <form method="post" action="<?= BASE_URL ?>/admin/proyectos/eliminar/<?= (int)$p['id'] ?>"
-                      onsubmit="return confirm('¿Eliminar este proyecto?');">
+                      onsubmit="confirmarEliminar(event,'¿Eliminar este proyecto?')">
                   <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::token(), ENT_QUOTES, 'UTF-8') ?>">
                   <button class="btn btn-sm btn-danger-outline btn-icon" title="Eliminar">
                     <i class="bi bi-trash"></i>
