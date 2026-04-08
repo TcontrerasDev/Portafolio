@@ -82,7 +82,13 @@ if ($ruta === '/tom-workspace/logout') {
     (new AuthController($pdo))->cerrarSesion(); exit;
 }
 
-// ── A partir de aquí se requiere sesión ───────────────────────────────────
+// ── A partir de aquí se requiere sesión (solo rutas /tom-workspace) ──────
+if (!str_starts_with($ruta, '/tom-workspace')) {
+    http_response_code(404);
+    echo "<h1>Error 404 - Página no encontrada</h1>";
+    echo "<p>La ruta <strong>" . htmlspecialchars($ruta, ENT_QUOTES, 'UTF-8') . "</strong> no existe.</p>";
+    exit;
+}
 AuthMiddleware::verificar();
 
 // Dashboard
@@ -190,7 +196,7 @@ if (preg_match('#^/tom-workspace/categorias-proyectos/eliminar/(\d+)$#', $ruta, 
     (new CategoriaProyectoAdminController($pdo))->eliminar((int)$m[1]); exit;
 }
 
-// ── 404 ───────────────────────────────────────────────────────────────────
+// ── 404 (ruta /tom-workspace no reconocida) ───────────────────────────────
 http_response_code(404);
 echo "<h1>Error 404 - Página no encontrada</h1>";
 echo "<p>La ruta <strong>" . htmlspecialchars($ruta, ENT_QUOTES, 'UTF-8') . "</strong> no existe.</p>";
