@@ -23,7 +23,7 @@ class ProyectoAdminController
     {
         $proyecto   = null;
         $categorias = $this->modeloCategorias->obtenerTodos();
-        $accion     = BASE . '/admin/proyectos/guardar';
+        $accion     = BASE_URL . '/admin/proyectos/guardar';
         require __DIR__ . '/../../views/admin/proyectos/formulario.php';
     }
 
@@ -34,7 +34,7 @@ class ProyectoAdminController
         $datos['codigo_imagen'] = SubidaImagen::procesar('imagen', '') ?? '';
         $this->modelo->crear($datos);
         $_SESSION['mensaje'] = 'Proyecto creado correctamente';
-        header('Location: ' . BASE . '/admin/proyectos');
+        header('Location: ' . BASE_URL . '/admin/proyectos');
         exit;
     }
 
@@ -43,7 +43,7 @@ class ProyectoAdminController
         $proyecto = $this->modelo->obtenerPorId($id);
         if (!$proyecto) { http_response_code(404); exit('No encontrado'); }
         $categorias = $this->modeloCategorias->obtenerTodos();
-        $accion     = BASE . '/admin/proyectos/actualizar/' . $id;
+        $accion     = BASE_URL . '/admin/proyectos/actualizar/' . $id;
         require __DIR__ . '/../../views/admin/proyectos/formulario.php';
     }
 
@@ -59,7 +59,7 @@ class ProyectoAdminController
 
         $this->modelo->actualizar($id, $datos);
         $_SESSION['mensaje'] = 'Proyecto actualizado';
-        header('Location: ' . BASE . '/admin/proyectos');
+        header('Location: ' . BASE_URL . '/admin/proyectos');
         exit;
     }
 
@@ -72,7 +72,7 @@ class ProyectoAdminController
         }
         $this->modelo->eliminar($id);
         $_SESSION['mensaje'] = 'Proyecto eliminado';
-        header('Location: ' . BASE . '/admin/proyectos');
+        header('Location: ' . BASE_URL . '/admin/proyectos');
         exit;
     }
 

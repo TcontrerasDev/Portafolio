@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="<?= BASE ?>/assets/css/admin.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/admin.css">
 </head>
 <body>
 <div class="admin-shell">
@@ -17,7 +17,7 @@
   <div class="admin-main">
     <header class="admin-topbar">
       <nav class="topbar-breadcrumb">
-        <a href="<?= BASE ?>/admin">admin</a>
+        <a href="<?= BASE_URL ?>/admin">admin</a>
         <?php if (!empty($breadcrumb)): ?>
           <span class="sep">/</span>
           <?php foreach ($breadcrumb as $idx => $item): ?>

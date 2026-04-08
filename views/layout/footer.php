@@ -38,8 +38,8 @@
     <script src="https://cdn.jsdelivr.net/npm/motion@12.38.0/dist/motion.js"
         integrity="sha384-z/A62QBp9kVAnDsIVQzfHAIc5wtCDLpDhwGipn7scpCbJqEOLtoAAJOaUcjCHT9C"
         crossorigin="anonymous"></script>
-    <script src="assets/js/animate.js"></script>
-    <script src="assets/js/project.js"></script>
+    <script src="<?= BASE_URL ?>/assets/js/animate.js"></script>
+    <script src="<?= BASE_URL ?>/assets/js/project.js"></script>
 </body>
 
 </html>

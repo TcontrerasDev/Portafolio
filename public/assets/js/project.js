@@ -1,3 +1,4 @@
+const BASE_URL = document.querySelector('meta[name="base-url"]')?.content ?? '';
 let projects = [];
 
 function esc(str) {
@@ -17,8 +18,8 @@ async function loadProjects(category = "todos") {
   const contenedor = document.getElementById("bento-projects");
   const url =
     category === "todos"
-      ? "/tomas-contreras/api/proyectos"
-      : `/tomas-contreras/api/proyectos?categoria=${encodeURIComponent(category)}`;
+      ? BASE_URL + "/api/proyectos"
+      : `${BASE_URL}/api/proyectos?categoria=${encodeURIComponent(category)}`;
 
   try {
     const response = await fetch(url);

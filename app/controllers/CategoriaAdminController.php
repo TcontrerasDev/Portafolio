@@ -20,7 +20,7 @@ class CategoriaAdminController
     public function crear(): void
     {
         $categoria = null;
-        $accion    = BASE . '/admin/categorias/guardar';
+        $accion    = BASE_URL . '/admin/categorias/guardar';
         require __DIR__ . '/../../views/admin/categorias/formulario.php';
     }
 
@@ -30,7 +30,7 @@ class CategoriaAdminController
         $datos = $this->extraerDatos();
         $this->modelo->crear($datos);
         $_SESSION['mensaje'] = 'Categoría creada correctamente';
-        header('Location: ' . BASE . '/admin/categorias');
+        header('Location: ' . BASE_URL . '/admin/categorias');
         exit;
     }
 
@@ -38,7 +38,7 @@ class CategoriaAdminController
     {
         $categoria = $this->modelo->obtenerPorId($id);
         if (!$categoria) { http_response_code(404); exit('No encontrado'); }
-        $accion = BASE . '/admin/categorias/actualizar/' . $id;
+        $accion = BASE_URL . '/admin/categorias/actualizar/' . $id;
         require __DIR__ . '/../../views/admin/categorias/formulario.php';
     }
 
@@ -48,7 +48,7 @@ class CategoriaAdminController
         if (!$this->modelo->obtenerPorId($id)) { http_response_code(404); exit('No encontrado'); }
         $this->modelo->actualizar($id, $this->extraerDatos());
         $_SESSION['mensaje'] = 'Categoría actualizada';
-        header('Location: ' . BASE . '/admin/categorias');
+        header('Location: ' . BASE_URL . '/admin/categorias');
         exit;
     }
 
@@ -57,12 +57,12 @@ class CategoriaAdminController
         Csrf::validar();
         if ($this->modelo->estaEnUso($id)) {
             $_SESSION['mensaje'] = 'No se puede eliminar: la categoría está en uso';
-            header('Location: ' . BASE . '/admin/categorias');
+            header('Location: ' . BASE_URL . '/admin/categorias');
             exit;
         }
         $this->modelo->eliminar($id);
         $_SESSION['mensaje'] = 'Categoría eliminada';
-        header('Location: ' . BASE . '/admin/categorias');
+        header('Location: ' . BASE_URL . '/admin/categorias');
         exit;
     }
 

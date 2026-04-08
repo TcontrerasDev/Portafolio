@@ -20,7 +20,7 @@ class ExperienciaAdminController
     public function crear(): void
     {
         $experiencia = null;
-        $accion      = BASE . '/admin/experiencia/guardar';
+        $accion      = BASE_URL . '/admin/experiencia/guardar';
         require __DIR__ . '/../../views/admin/experiencia/formulario.php';
     }
 
@@ -29,7 +29,7 @@ class ExperienciaAdminController
         Csrf::validar();
         $this->modelo->crear($this->extraerDatos());
         $_SESSION['mensaje'] = 'Experiencia creada correctamente';
-        header('Location: ' . BASE . '/admin/experiencia');
+        header('Location: ' . BASE_URL . '/admin/experiencia');
         exit;
     }
 
@@ -37,7 +37,7 @@ class ExperienciaAdminController
     {
         $experiencia = $this->modelo->obtenerPorId($id);
         if (!$experiencia) { http_response_code(404); exit('No encontrado'); }
-        $accion = BASE . '/admin/experiencia/actualizar/' . $id;
+        $accion = BASE_URL . '/admin/experiencia/actualizar/' . $id;
         require __DIR__ . '/../../views/admin/experiencia/formulario.php';
     }
 
@@ -47,7 +47,7 @@ class ExperienciaAdminController
         if (!$this->modelo->obtenerPorId($id)) { http_response_code(404); exit('No encontrado'); }
         $this->modelo->actualizar($id, $this->extraerDatos());
         $_SESSION['mensaje'] = 'Experiencia actualizada';
-        header('Location: ' . BASE . '/admin/experiencia');
+        header('Location: ' . BASE_URL . '/admin/experiencia');
         exit;
     }
 
@@ -56,7 +56,7 @@ class ExperienciaAdminController
         Csrf::validar();
         $this->modelo->eliminar($id);
         $_SESSION['mensaje'] = 'Experiencia eliminada';
-        header('Location: ' . BASE . '/admin/experiencia');
+        header('Location: ' . BASE_URL . '/admin/experiencia');
         exit;
     }
 

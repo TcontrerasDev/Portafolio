@@ -28,7 +28,7 @@ class AuthController
         if ($ahora < $_SESSION['login_bloqueado_hasta']) {
             $minutos = (int) ceil(($_SESSION['login_bloqueado_hasta'] - $ahora) / 60);
             $_SESSION['error_login'] = "Demasiados intentos. Espera {$minutos} minuto(s).";
-            header('Location: ' . BASE . '/admin/login');
+            header('Location: ' . BASE_URL . '/admin/login');
             exit;
         }
 
@@ -42,7 +42,7 @@ class AuthController
             session_regenerate_id(true);
             $_SESSION['id_usuario']     = $usuario['id'];
             $_SESSION['nombre_usuario'] = $usuario['nombre_usuario'];
-            header('Location: ' . BASE . '/admin');
+            header('Location: ' . BASE_URL . '/admin');
             exit;
         }
 
@@ -54,7 +54,7 @@ class AuthController
         } else {
             $_SESSION['error_login'] = 'Credenciales inválidas';
         }
-        header('Location: ' . BASE . '/admin/login');
+        header('Location: ' . BASE_URL . '/admin/login');
         exit;
     }
 
@@ -62,7 +62,7 @@ class AuthController
     {
         $_SESSION = [];
         session_destroy();
-        header('Location: ' . BASE . '/admin/login');
+        header('Location: ' . BASE_URL . '/admin/login');
         exit;
     }
 }

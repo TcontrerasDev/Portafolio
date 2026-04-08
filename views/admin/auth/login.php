@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="<?= BASE ?>/assets/css/admin.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/admin.css">
 </head>
 <body>
 <div class="login-page">
@@ -27,7 +27,7 @@
       </div>
     <?php endif; ?>
 
-    <form method="post" action="<?= BASE ?>/admin/login" class="login-form">
+    <form method="post" action="<?= BASE_URL ?>/admin/login" class="login-form">
       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::token(), ENT_QUOTES, 'UTF-8') ?>">
 
       <div class="form-group">
