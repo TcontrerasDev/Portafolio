@@ -12,7 +12,7 @@
                     <ul>
                         <li class="list-item"><a href="https://www.linkedin.com/in/tomas-contreras-6455b332b/"
                                 target="_blank">Linkedin</a></li>
-                        <li class="list-item"><a href="https://github.com/Tomas-Duoc" target="_blank">GitHub</a></li>
+                        <li class="list-item"><a href="https://github.com/TcontrerasDev" target="_blank">GitHub</a></li>
                         <li class="list-item"><a href="https://www.instagram.com/t0m_ct/" target="_blank">Instagram</a>
                         </li>
                         <li class="list-item"><a href="https://www.behance.net/tomascontreras1"
