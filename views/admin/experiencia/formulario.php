@@ -2,7 +2,7 @@
 $esEdicion    = !empty($experiencia);
 $tituloPagina = $esEdicion ? 'Editar experiencia' : 'Nueva experiencia';
 $breadcrumb   = [
-  ['label' => 'Experiencia', 'url' => BASE . '/admin/experiencia'],
+  ['label' => 'Experiencia', 'url' => BASE_URL . '/admin/experiencia'],
   ['label' => $tituloPagina, 'url' => ''],
 ];
 require __DIR__ . '/../layout/header.php';
@@ -46,7 +46,7 @@ require __DIR__ . '/../layout/header.php';
           <button type="submit" class="btn btn-primary">
             <i class="bi bi-check-lg"></i> Guardar
           </button>
-          <a href="<?= BASE ?>/admin/experiencia" class="btn btn-outline">Cancelar</a>
+          <a href="<?= BASE_URL ?>/admin/experiencia" class="btn btn-outline">Cancelar</a>
         </div>
       </form>
     </div>

@@ -1,12 +1,12 @@
 <?php
 $tituloPagina = 'Categorías de proyectos';
-$breadcrumb   = [['label' => 'Categorías proyectos', 'url' => BASE . '/admin/categorias-proyectos']];
+$breadcrumb   = [['label' => 'Categorías proyectos', 'url' => BASE_URL . '/admin/categorias-proyectos']];
 require __DIR__ . '/../layout/header.php';
 ?>
 
 <div class="page-header">
   <h1 class="page-title">Categorías <span class="page-title-sub">/ proyectos</span></h1>
-  <a href="<?= BASE ?>/admin/categorias-proyectos/crear" class="btn btn-primary">
+  <a href="<?= BASE_URL ?>/admin/categorias-proyectos/crear" class="btn btn-primary">
     <i class="bi bi-plus-lg"></i> Nueva categoría
   </a>
 </div>
@@ -35,10 +35,10 @@ require __DIR__ . '/../layout/header.php';
             <td><?= htmlspecialchars($cat['nombre'], ENT_QUOTES, 'UTF-8') ?></td>
             <td>
               <div class="actions-cell">
-                <a href="<?= BASE ?>/admin/categorias-proyectos/editar/<?= (int)$cat['id'] ?>" class="btn btn-sm btn-outline btn-icon" title="Editar">
+                <a href="<?= BASE_URL ?>/admin/categorias-proyectos/editar/<?= (int)$cat['id'] ?>" class="btn btn-sm btn-outline btn-icon" title="Editar">
                   <i class="bi bi-pencil"></i>
                 </a>
-                <form method="post" action="<?= BASE ?>/admin/categorias-proyectos/eliminar/<?= (int)$cat['id'] ?>"
+                <form method="post" action="<?= BASE_URL ?>/admin/categorias-proyectos/eliminar/<?= (int)$cat['id'] ?>"
                       onsubmit="return confirm('¿Eliminar esta categoría?');">
                   <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::token(), ENT_QUOTES, 'UTF-8') ?>">
                   <button class="btn btn-sm btn-danger-outline btn-icon" title="Eliminar">

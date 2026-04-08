@@ -23,7 +23,7 @@ class HabilidadAdminController
     {
         $habilidad  = null;
         $categorias = $this->modeloCategorias->obtenerTodos();
-        $accion     = BASE . '/admin/habilidades/guardar';
+        $accion     = BASE_URL . '/admin/habilidades/guardar';
         require __DIR__ . '/../../views/admin/habilidades/formulario.php';
     }
 
@@ -33,7 +33,7 @@ class HabilidadAdminController
         $datos = $this->extraerDatos();
         $this->modelo->crear($datos);
         $_SESSION['mensaje'] = 'Habilidad creada correctamente';
-        header('Location: ' . BASE . '/admin/habilidades');
+        header('Location: ' . BASE_URL . '/admin/habilidades');
         exit;
     }
 
@@ -42,7 +42,7 @@ class HabilidadAdminController
         $habilidad = $this->modelo->obtenerPorId($id);
         if (!$habilidad) { http_response_code(404); exit('No encontrado'); }
         $categorias = $this->modeloCategorias->obtenerTodos();
-        $accion     = BASE . '/admin/habilidades/actualizar/' . $id;
+        $accion     = BASE_URL . '/admin/habilidades/actualizar/' . $id;
         require __DIR__ . '/../../views/admin/habilidades/formulario.php';
     }
 
@@ -53,7 +53,7 @@ class HabilidadAdminController
         if (!$existente) { http_response_code(404); exit('No encontrado'); }
         $this->modelo->actualizar($id, $this->extraerDatos());
         $_SESSION['mensaje'] = 'Habilidad actualizada';
-        header('Location: ' . BASE . '/admin/habilidades');
+        header('Location: ' . BASE_URL . '/admin/habilidades');
         exit;
     }
 
@@ -62,7 +62,7 @@ class HabilidadAdminController
         Csrf::validar();
         $this->modelo->eliminar($id);
         $_SESSION['mensaje'] = 'Habilidad eliminada';
-        header('Location: ' . BASE . '/admin/habilidades');
+        header('Location: ' . BASE_URL . '/admin/habilidades');
         exit;
     }
 

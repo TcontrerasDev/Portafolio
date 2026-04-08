@@ -2,7 +2,7 @@
 $esEdicion    = !empty($proyecto);
 $tituloPagina = $esEdicion ? 'Editar proyecto' : 'Nuevo proyecto';
 $breadcrumb   = [
-  ['label' => 'Proyectos', 'url' => BASE . '/admin/proyectos'],
+  ['label' => 'Proyectos', 'url' => BASE_URL . '/admin/proyectos'],
   ['label' => $tituloPagina, 'url' => ''],
 ];
 require __DIR__ . '/../layout/header.php';
@@ -47,7 +47,7 @@ require __DIR__ . '/../layout/header.php';
           <label class="form-label">Imagen</label>
           <?php if (!empty($proyecto['codigo_imagen'])): ?>
             <div class="img-preview-wrap">
-              <img src="<?= BASE ?>/assets/img/<?= htmlspecialchars($proyecto['codigo_imagen'], ENT_QUOTES, 'UTF-8') ?>"
+              <img src="<?= BASE_URL ?>/assets/img/<?= htmlspecialchars($proyecto['codigo_imagen'], ENT_QUOTES, 'UTF-8') ?>"
                    alt="" class="img-preview">
               <span class="img-preview-name"><?= htmlspecialchars($proyecto['codigo_imagen'], ENT_QUOTES, 'UTF-8') ?></span>
             </div>
@@ -60,7 +60,7 @@ require __DIR__ . '/../layout/header.php';
           <button type="submit" class="btn btn-primary">
             <i class="bi bi-check-lg"></i> Guardar
           </button>
-          <a href="<?= BASE ?>/admin/proyectos" class="btn btn-outline">Cancelar</a>
+          <a href="<?= BASE_URL ?>/admin/proyectos" class="btn btn-outline">Cancelar</a>
         </div>
       </form>
     </div>
