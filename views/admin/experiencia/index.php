@@ -1,12 +1,12 @@
 <?php
 $tituloPagina = 'Experiencia';
-$breadcrumb   = [['label' => 'Experiencia', 'url' => BASE_URL . '/admin/experiencia']];
+$breadcrumb   = [['label' => 'Experiencia', 'url' => BASE_URL . '/tom-workspace/experiencia']];
 require __DIR__ . '/../layout/header.php';
 ?>
 
 <div class="page-header">
   <h1 class="page-title">Experiencia laboral</h1>
-  <a href="<?= BASE_URL ?>/admin/experiencia/crear" class="btn btn-primary">
+  <a href="<?= BASE_URL ?>/tom-workspace/experiencia/crear" class="btn btn-primary">
     <i class="bi bi-plus-lg"></i> Nueva experiencia
   </a>
 </div>
@@ -37,11 +37,11 @@ require __DIR__ . '/../layout/header.php';
             <td><span class="mono-muted"><?= htmlspecialchars($exp['periodo'], ENT_QUOTES, 'UTF-8') ?></span></td>
             <td>
               <div class="actions-cell">
-                <a href="<?= BASE_URL ?>/admin/experiencia/editar/<?= (int)$exp['id'] ?>" class="btn btn-sm btn-outline btn-icon" title="Editar">
+                <a href="<?= BASE_URL ?>/tom-workspace/experiencia/editar/<?= (int)$exp['id'] ?>" class="btn btn-sm btn-outline btn-icon" title="Editar">
                   <i class="bi bi-pencil"></i>
                 </a>
-                <form method="post" action="<?= BASE_URL ?>/admin/experiencia/eliminar/<?= (int)$exp['id'] ?>"
-                      onsubmit="confirmarEliminar(event,'¿Eliminar esta experiencia?')">
+                <form method="post" action="<?= BASE_URL ?>/tom-workspace/experiencia/eliminar/<?= (int)$exp['id'] ?>"
+                      data-confirm="¿Eliminar esta experiencia?">
                   <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::token(), ENT_QUOTES, 'UTF-8') ?>">
                   <button class="btn btn-sm btn-danger-outline btn-icon" title="Eliminar">
                     <i class="bi bi-trash"></i>

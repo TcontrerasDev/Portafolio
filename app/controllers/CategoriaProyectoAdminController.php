@@ -20,7 +20,7 @@ class CategoriaProyectoAdminController
     public function crear(): void
     {
         $categoria = null;
-        $accion    = BASE_URL . '/admin/categorias-proyectos/guardar';
+        $accion    = BASE_URL . '/tom-workspace/categorias-proyectos/guardar';
         require __DIR__ . '/../../views/admin/categorias-proyectos/formulario.php';
     }
 
@@ -30,7 +30,7 @@ class CategoriaProyectoAdminController
         $datos = $this->extraerDatos();
         $this->modelo->crear($datos);
         $_SESSION['mensaje'] = 'Categoría de proyecto creada';
-        header('Location: ' . BASE_URL . '/admin/categorias-proyectos');
+        header('Location: ' . BASE_URL . '/tom-workspace/categorias-proyectos');
         exit;
     }
 
@@ -38,7 +38,7 @@ class CategoriaProyectoAdminController
     {
         $categoria = $this->modelo->obtenerPorId($id);
         if (!$categoria) { http_response_code(404); exit('No encontrado'); }
-        $accion = BASE_URL . '/admin/categorias-proyectos/actualizar/' . $id;
+        $accion = BASE_URL . '/tom-workspace/categorias-proyectos/actualizar/' . $id;
         require __DIR__ . '/../../views/admin/categorias-proyectos/formulario.php';
     }
 
@@ -48,7 +48,7 @@ class CategoriaProyectoAdminController
         if (!$this->modelo->obtenerPorId($id)) { http_response_code(404); exit('No encontrado'); }
         $this->modelo->actualizar($id, $this->extraerDatos());
         $_SESSION['mensaje'] = 'Categoría de proyecto actualizada';
-        header('Location: ' . BASE_URL . '/admin/categorias-proyectos');
+        header('Location: ' . BASE_URL . '/tom-workspace/categorias-proyectos');
         exit;
     }
 
@@ -57,12 +57,12 @@ class CategoriaProyectoAdminController
         Csrf::validar();
         if ($this->modelo->estaEnUso($id)) {
             $_SESSION['mensaje'] = 'No se puede eliminar: la categoría está en uso por proyectos';
-            header('Location: ' . BASE_URL . '/admin/categorias-proyectos');
+            header('Location: ' . BASE_URL . '/tom-workspace/categorias-proyectos');
             exit;
         }
         $this->modelo->eliminar($id);
         $_SESSION['mensaje'] = 'Categoría de proyecto eliminada';
-        header('Location: ' . BASE_URL . '/admin/categorias-proyectos');
+        header('Location: ' . BASE_URL . '/tom-workspace/categorias-proyectos');
         exit;
     }
 

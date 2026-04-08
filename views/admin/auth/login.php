@@ -27,7 +27,7 @@
       </div>
     <?php endif; ?>
 
-    <form method="post" action="<?= BASE_URL ?>/admin/login" class="login-form">
+    <form method="post" action="<?= BASE_URL ?>/tom-workspace/login" class="login-form">
       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::token(), ENT_QUOTES, 'UTF-8') ?>">
 
       <div class="form-group">

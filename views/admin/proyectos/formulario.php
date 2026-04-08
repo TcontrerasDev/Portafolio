@@ -2,7 +2,7 @@
 $esEdicion    = !empty($proyecto);
 $tituloPagina = $esEdicion ? 'Editar proyecto' : 'Nuevo proyecto';
 $breadcrumb   = [
-  ['label' => 'Proyectos', 'url' => BASE_URL . '/admin/proyectos'],
+  ['label' => 'Proyectos', 'url' => BASE_URL . '/tom-workspace/proyectos'],
   ['label' => $tituloPagina, 'url' => ''],
 ];
 require __DIR__ . '/../layout/header.php';
@@ -60,7 +60,7 @@ require __DIR__ . '/../layout/header.php';
           <button type="submit" class="btn btn-primary">
             <i class="bi bi-check-lg"></i> Guardar
           </button>
-          <a href="<?= BASE_URL ?>/admin/proyectos" class="btn btn-outline">Cancelar</a>
+          <a href="<?= BASE_URL ?>/tom-workspace/proyectos" class="btn btn-outline">Cancelar</a>
         </div>
       </form>
     </div>

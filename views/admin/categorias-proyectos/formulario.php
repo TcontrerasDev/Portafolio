@@ -2,7 +2,7 @@
 $esEdicion    = !empty($categoria);
 $tituloPagina = $esEdicion ? 'Editar categoría' : 'Nueva categoría';
 $breadcrumb   = [
-  ['label' => 'Categorías proyectos', 'url' => BASE_URL . '/admin/categorias-proyectos'],
+  ['label' => 'Categorías proyectos', 'url' => BASE_URL . '/tom-workspace/categorias-proyectos'],
   ['label' => $tituloPagina, 'url' => ''],
 ];
 require __DIR__ . '/../layout/header.php';
@@ -28,7 +28,7 @@ require __DIR__ . '/../layout/header.php';
           <button type="submit" class="btn btn-primary">
             <i class="bi bi-check-lg"></i> Guardar
           </button>
-          <a href="<?= BASE_URL ?>/admin/categorias-proyectos" class="btn btn-outline">Cancelar</a>
+          <a href="<?= BASE_URL ?>/tom-workspace/categorias-proyectos" class="btn btn-outline">Cancelar</a>
         </div>
       </form>
     </div>

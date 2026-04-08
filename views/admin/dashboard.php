@@ -33,13 +33,13 @@ require __DIR__ . '/layout/header.php';
 
 <div class="card">
   <div class="card-body-actions">
-    <a href="<?= BASE_URL ?>/admin/proyectos/crear" class="btn btn-outline">
+    <a href="<?= BASE_URL ?>/tom-workspace/proyectos/crear" class="btn btn-outline">
       <i class="bi bi-plus-lg"></i> Nuevo proyecto
     </a>
-    <a href="<?= BASE_URL ?>/admin/habilidades/crear" class="btn btn-outline">
+    <a href="<?= BASE_URL ?>/tom-workspace/habilidades/crear" class="btn btn-outline">
       <i class="bi bi-plus-lg"></i> Nueva habilidad
     </a>
-    <a href="<?= BASE_URL ?>/admin/experiencia/crear" class="btn btn-outline">
+    <a href="<?= BASE_URL ?>/tom-workspace/experiencia/crear" class="btn btn-outline">
       <i class="bi bi-plus-lg"></i> Nueva experiencia
     </a>
   </div>

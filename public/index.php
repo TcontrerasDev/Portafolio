@@ -72,13 +72,13 @@ if ($ruta === '/api/proyectos' && $metodo === 'GET') {
 
 // ── Rutas admin: login (públicas) ─────────────────────────────────────────
 
-if ($ruta === '/admin/login' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/login' && $metodo === 'GET') {
     (new AuthController($pdo))->mostrarLogin(); exit;
 }
-if ($ruta === '/admin/login' && $metodo === 'POST') {
+if ($ruta === '/tom-workspace/login' && $metodo === 'POST') {
     (new AuthController($pdo))->procesarLogin(); exit;
 }
-if ($ruta === '/admin/logout') {
+if ($ruta === '/tom-workspace/logout') {
     (new AuthController($pdo))->cerrarSesion(); exit;
 }
 
@@ -86,107 +86,107 @@ if ($ruta === '/admin/logout') {
 AuthMiddleware::verificar();
 
 // Dashboard
-if ($ruta === '/admin' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace' && $metodo === 'GET') {
     (new AdminController($pdo))->dashboard(); exit;
 }
 
 // ── Proyectos ─────────────────────────────────────────────────────────────
-if ($ruta === '/admin/proyectos' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/proyectos' && $metodo === 'GET') {
     (new ProyectoAdminController($pdo))->index(); exit;
 }
-if ($ruta === '/admin/proyectos/crear' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/proyectos/crear' && $metodo === 'GET') {
     (new ProyectoAdminController($pdo))->crear(); exit;
 }
-if ($ruta === '/admin/proyectos/guardar' && $metodo === 'POST') {
+if ($ruta === '/tom-workspace/proyectos/guardar' && $metodo === 'POST') {
     (new ProyectoAdminController($pdo))->guardar(); exit;
 }
-if (preg_match('#^/admin/proyectos/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
+if (preg_match('#^/tom-workspace/proyectos/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
     (new ProyectoAdminController($pdo))->editar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/proyectos/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/proyectos/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new ProyectoAdminController($pdo))->actualizar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/proyectos/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/proyectos/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new ProyectoAdminController($pdo))->eliminar((int)$m[1]); exit;
 }
 
 // ── Habilidades ───────────────────────────────────────────────────────────
-if ($ruta === '/admin/habilidades' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/habilidades' && $metodo === 'GET') {
     (new HabilidadAdminController($pdo))->index(); exit;
 }
-if ($ruta === '/admin/habilidades/crear' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/habilidades/crear' && $metodo === 'GET') {
     (new HabilidadAdminController($pdo))->crear(); exit;
 }
-if ($ruta === '/admin/habilidades/guardar' && $metodo === 'POST') {
+if ($ruta === '/tom-workspace/habilidades/guardar' && $metodo === 'POST') {
     (new HabilidadAdminController($pdo))->guardar(); exit;
 }
-if (preg_match('#^/admin/habilidades/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
+if (preg_match('#^/tom-workspace/habilidades/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
     (new HabilidadAdminController($pdo))->editar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/habilidades/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/habilidades/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new HabilidadAdminController($pdo))->actualizar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/habilidades/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/habilidades/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new HabilidadAdminController($pdo))->eliminar((int)$m[1]); exit;
 }
 
 // ── Experiencia ───────────────────────────────────────────────────────────
-if ($ruta === '/admin/experiencia' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/experiencia' && $metodo === 'GET') {
     (new ExperienciaAdminController($pdo))->index(); exit;
 }
-if ($ruta === '/admin/experiencia/crear' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/experiencia/crear' && $metodo === 'GET') {
     (new ExperienciaAdminController($pdo))->crear(); exit;
 }
-if ($ruta === '/admin/experiencia/guardar' && $metodo === 'POST') {
+if ($ruta === '/tom-workspace/experiencia/guardar' && $metodo === 'POST') {
     (new ExperienciaAdminController($pdo))->guardar(); exit;
 }
-if (preg_match('#^/admin/experiencia/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
+if (preg_match('#^/tom-workspace/experiencia/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
     (new ExperienciaAdminController($pdo))->editar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/experiencia/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/experiencia/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new ExperienciaAdminController($pdo))->actualizar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/experiencia/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/experiencia/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new ExperienciaAdminController($pdo))->eliminar((int)$m[1]); exit;
 }
 
 // ── Categorías (habilidades) ──────────────────────────────────────────────
-if ($ruta === '/admin/categorias' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/categorias' && $metodo === 'GET') {
     (new CategoriaAdminController($pdo))->index(); exit;
 }
-if ($ruta === '/admin/categorias/crear' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/categorias/crear' && $metodo === 'GET') {
     (new CategoriaAdminController($pdo))->crear(); exit;
 }
-if ($ruta === '/admin/categorias/guardar' && $metodo === 'POST') {
+if ($ruta === '/tom-workspace/categorias/guardar' && $metodo === 'POST') {
     (new CategoriaAdminController($pdo))->guardar(); exit;
 }
-if (preg_match('#^/admin/categorias/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
+if (preg_match('#^/tom-workspace/categorias/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
     (new CategoriaAdminController($pdo))->editar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/categorias/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/categorias/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new CategoriaAdminController($pdo))->actualizar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/categorias/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/categorias/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new CategoriaAdminController($pdo))->eliminar((int)$m[1]); exit;
 }
 
 // ── Categorías de proyectos ───────────────────────────────────────────────
-if ($ruta === '/admin/categorias-proyectos' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/categorias-proyectos' && $metodo === 'GET') {
     (new CategoriaProyectoAdminController($pdo))->index(); exit;
 }
-if ($ruta === '/admin/categorias-proyectos/crear' && $metodo === 'GET') {
+if ($ruta === '/tom-workspace/categorias-proyectos/crear' && $metodo === 'GET') {
     (new CategoriaProyectoAdminController($pdo))->crear(); exit;
 }
-if ($ruta === '/admin/categorias-proyectos/guardar' && $metodo === 'POST') {
+if ($ruta === '/tom-workspace/categorias-proyectos/guardar' && $metodo === 'POST') {
     (new CategoriaProyectoAdminController($pdo))->guardar(); exit;
 }
-if (preg_match('#^/admin/categorias-proyectos/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
+if (preg_match('#^/tom-workspace/categorias-proyectos/editar/(\d+)$#', $ruta, $m) && $metodo === 'GET') {
     (new CategoriaProyectoAdminController($pdo))->editar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/categorias-proyectos/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/categorias-proyectos/actualizar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new CategoriaProyectoAdminController($pdo))->actualizar((int)$m[1]); exit;
 }
-if (preg_match('#^/admin/categorias-proyectos/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
+if (preg_match('#^/tom-workspace/categorias-proyectos/eliminar/(\d+)$#', $ruta, $m) && $metodo === 'POST') {
     (new CategoriaProyectoAdminController($pdo))->eliminar((int)$m[1]); exit;
 }
 
