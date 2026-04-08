@@ -1,4 +1,4 @@
-# Hola, soy Tomas 👋
+# Hola, soy Tomas
 ## Estudiante de Diseño y Desarrollo Web | Entusiasta del Front-end
 
 Bienvenido al repositorio de mi portafolio personal. Aquí comparto los proyectos en los que he estado trabajando, aplicando mis conocimientos tanto teóricos como prácticos para construir soluciones digitales atractivas y funcionales.
@@ -14,6 +14,6 @@ Bienvenido al repositorio de mi portafolio personal. Aquí comparto los proyecto
 * **Diseño:** UI/UX, creación de wireframes y prototipos interactivos.
 
 ### Cómo contactarme
-* **GitHub:** [@TcontrerasDev]([text](https://github.com/Tomas-Duoc))
-* **LinkedIn:** [Tomas Contreras]([text](www.linkedin.com/in/tomas-contreras-6455b332b))
-* **Instagram** [t0m_ct]([text](https://www.instagram.com/t0m_ct/))
+* **GitHub:** [@TcontrerasDev](https://github.com/Tomas-Duoc))
+* **LinkedIn:** [Tomas Contreras](www.linkedin.com/in/tomas-contreras-6455b332b))
+* **Instagram** [t0m_ct](https://www.instagram.com/t0m_ct/))
