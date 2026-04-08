@@ -15,6 +15,14 @@
         </IfModule>
     </FilesMatch>
 
-    # 3. Redirige todo el tráfico que llega aquí hacia la carpeta public/
+    # 3. Si se pide la raíz exacta, enviarla a public/
+    RewriteRule ^$ public/ [L]
+
+    # 4. Si es un directorio que existe (subsitio) y no es la raíz, dejarlo pasar
+    # El .+ asegura que estemos pidiendo "algo" dentro de la carpeta
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.+ - [L]
+
+    # 5. Todo lo demás (rutas del sitio) enviarlo a public/
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
