@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="base-url" content="<?= BASE_URL ?>">
+    <meta name="author" content="Tomas Contreras Moya <tcontreras.com@gmail.com>">
     <title>Tomas.dev</title>
+    <meta name="description" content="Portafolio de Tomas Contreras Moya, enfocado en Diseño y Desarrollo Web. Proyectos Front-end y UI/UX que transforman ideas en experiencias digitales intuitivas y funcionales." />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/global.css">
