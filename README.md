@@ -14,6 +14,6 @@ Bienvenido al repositorio de mi portafolio personal. Aquí comparto los proyecto
 * **Diseño:** UI/UX, creación de wireframes y prototipos interactivos.
 
 ### Cómo contactarme
-* **GitHub:** [@TcontrerasDev](https://github.com/Tomas-Duoc))
-* **LinkedIn:** [Tomas Contreras](www.linkedin.com/in/tomas-contreras-6455b332b))
-* **Instagram** [t0m_ct](https://www.instagram.com/t0m_ct/))
+* **GitHub:** [@TcontrerasDev](https://github.com/Tomas-Duoc)
+* **LinkedIn:** [Tomas Contreras](www.linkedin.com/in/tomas-contreras-6455b332b)
+* **Instagram:** [t0m_ct](https://www.instagram.com/t0m_ct/)
