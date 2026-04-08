@@ -22,6 +22,8 @@ session_set_cookie_params([
 ]);
 session_start();
 
+header("Content-Security-Policy: default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net fonts.googleapis.com; font-src 'self' cdn.jsdelivr.net fonts.gstatic.com; img-src 'self' data:; connect-src 'self' cdn.jsdelivr.net; form-action 'self'; object-src 'none'; frame-ancestors 'none'");
+
 // 1. CARGA DE ARCHIVOS
 require_once __DIR__ . '/../config/app.php';
 require_once __DIR__ . '/../config/database.php';
