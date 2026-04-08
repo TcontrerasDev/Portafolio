@@ -16,4 +16,3 @@ Bienvenido al repositorio de mi portafolio personal. Aquí comparto los proyecto
 ### Cómo contactarme
 * **GitHub:** [@TcontrerasDev](https://github.com/TcontrerasDev)
 * **LinkedIn:** [Tomas Contreras](https://www.linkedin.com/in/tomas-contreras-6455b332b)
-* **Instagram:** [t0m_ct](https://www.instagram.com/t0m_ct/)
